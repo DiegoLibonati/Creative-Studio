@@ -1,0 +1,110 @@
+.form_section_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  background: url("./templates/form.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.form_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.form_container h2 {
+  font-size: 5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-weight: 900;
+}
+
+.form_container input {
+  font-size: 2rem;
+  padding: 1rem;
+  background: none;
+  border: 0.2rem solid #fff;
+  outline: none;
+  color: #fff;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.form_container input::placeholder {
+  color: #fff;
+}
+
+.form_container textarea {
+  resize: none;
+  width: 100%;
+  font-size: 2rem;
+  padding: 1rem;
+  background: none;
+  border: 0.2rem solid #fff;
+  outline: none;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.form_container textarea::placeholder {
+  color: #fff;
+}
+
+.form_container button {
+  padding: 1rem;
+  background-color: #fff;
+  border: none;
+  color: #ed92b6;
+  font-size: 2rem;
+  font-weight: 900;
+  width: 15rem;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 280px) and (orientation: landscape) {
+  .form_section_container {
+    height: 70rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .form_section_container {
+    height: 70rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .form_section_container {
+    height: 100vh;
+  }
+
+  .form_container input {
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+
+  .form_container textarea {
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+
+  .form_container h2 {
+    margin-bottom: 4rem;
+    font-size: 10rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .form_container h2 {
+    font-size: 15rem;
+  }
+}
