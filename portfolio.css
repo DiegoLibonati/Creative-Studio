@@ -1,0 +1,136 @@
+.portfolio_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+
+.portfolio_container_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  height: auto;
+  margin: 2rem 0 2rem 0;
+}
+
+.portfolio_container_header h4 {
+  font-size: 2rem;
+  color: #ed92ae;
+}
+
+.portfolio_container_header h2 {
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.portfolio_container_galery {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 1rem;
+  margin-top: 1rem;
+}
+
+.portfolio_container_galery img {
+  height: 35rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.portfolio_container_cards {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: column wrap;
+  width: 100%;
+  justify-self: center;
+  height: 35rem;
+}
+
+.development {
+  background-color: #61d4e7;
+}
+
+.design {
+  background-color: #f6d427;
+}
+
+.editing {
+  background-color: #ed92ae;
+}
+
+.strategy {
+  background-color: #61d4e7;
+}
+
+.card_container i {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.card_container h3 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 360px) {
+  .portfolio_container_header h4 {
+    font-size: 2rem;
+  }
+
+  .portfolio_container_header h2 {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .portfolio_container_header h4 {
+    font-size: 3rem;
+  }
+
+  .portfolio_container_header h2 {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .portfolio_container_galery {
+    column-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portfolio_container_cards {
+    column-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .portfolio_container {
+    padding: 5rem;
+  }
+
+  .portfolio_container_galery {
+    margin-top: 5rem;
+    width: 75%;
+  }
+
+  .portfolio_container_cards {
+    margin-top: 5rem;
+    width: 75%;
+    column-gap: 6rem;
+  }
+}

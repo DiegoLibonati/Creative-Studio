@@ -1,0 +1,134 @@
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 7rem;
+  transition: backdrop-filter 1s;
+}
+
+.header_container_logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 7rem;
+  padding: 0 1rem 0 1rem;
+}
+
+.header_container_logo a {
+  font-size: 3rem;
+  text-decoration: none;
+  font-weight: 900;
+  color: #fff;
+  transition: color 1s;
+}
+
+.fa-bars {
+  font-size: 3rem;
+  color: #fff;
+  transition: color 1s;
+}
+
+.header_container_nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  background-color: #eac020;
+  overflow: hidden;
+  transition: width 1s;
+  box-shadow: 5px 0px 0px 0px rgb(255, 255, 255);
+}
+
+.open-nav {
+  width: 50%;
+  transition: width 1s;
+}
+
+.header_container_nav_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: column wrap;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+
+.navLink {
+  text-align: center;
+  position: relative;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 1s;
+  text-decoration: none;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.175rem;
+  left: 0;
+  bottom: 0;
+  background-color: var(--underline);
+  transform: scale(0, 1);
+  transition: transform 1s;
+}
+
+.navLink:hover::after {
+  transform: scale(1, 1);
+  transition: transform 1s;
+}
+
+.active::after {
+  transform: scale(1, 1);
+  transition: transform 1s;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header_container {
+    justify-content: space-between;
+    padding: 0 5rem 0 5rem;
+  }
+  .header_container_logo {
+    justify-content: center;
+    width: auto;
+    padding: 1;
+  }
+
+  .fa-bars {
+    display: none !important;
+  }
+
+  .header_container_nav {
+    position: relative;
+    width: auto;
+    height: 7rem;
+    background-color: transparent;
+    transition: width 0s;
+    box-shadow: 0px 0px 0px 0px rgb(255, 255, 255);
+  }
+
+  .open-nav {
+    width: auto;
+    transition: width 0s;
+  }
+
+  .header_container_nav_list {
+    flex-flow: row wrap;
+  }
+
+  .header_container_nav_list li {
+    margin: 0 1rem 0 1rem;
+    font-weight: 800;
+  }
+}

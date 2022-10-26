@@ -1,0 +1,150 @@
+.side_section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+}
+
+.side_section_image {
+  height: 100vh;
+  width: 100%;
+  order: 2;
+}
+
+.side_section_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.side_section_information {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.side_section_information h4 {
+  font-size: 2rem;
+  color: #35cfe7;
+}
+
+.side_section_information h2 {
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.side_section_information p {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
+.side_section_information a {
+  padding: 1rem;
+  border: 0.3rem solid #35cfe7;
+  background: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-top: 2rem;
+  color: #000;
+}
+
+.color-features {
+  color: #f6d427 !important;
+}
+
+.color-features-btn {
+  border: 0.3rem solid #f6d427 !important;
+}
+
+.color-digitalstudio {
+  color: #ed92ae !important;
+}
+
+.color-digitalstudio-btn {
+  border: 0.3rem solid #ed92ae !important;
+}
+
+@media only screen and (min-width: 280px) and (orientation: landscape) {
+  .side_section_information {
+    height: 50rem;
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 360px) and (orientation: portrait) {
+  .side_section_information h4 {
+    font-size: 2rem;
+  }
+
+  .side_section_information h2 {
+    font-size: 4rem;
+  }
+
+  .side_section_information p {
+    font-size: 2.5rem;
+  }
+
+  .side_section_information a {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 540px) and (orientation: portrait) {
+  .side_section_information h4 {
+    font-size: 3rem;
+  }
+
+  .side_section_information h2 {
+    font-size: 6rem;
+  }
+
+  .side_section_information p {
+    font-size: 3rem;
+  }
+
+  .side_section_information a {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .side_section_information {
+    height: 55rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .side_section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .side_section_image {
+    height: 60rem;
+    order: 1;
+  }
+
+  .side_section_information {
+    order: 2;
+    height: 60rem;
+    padding: 5rem;
+  }
+
+  .image_features {
+    order: 2;
+  }
+
+  .information_features {
+    order: 1;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .side_section_information {
+    padding: 10rem;
+  }
+}
