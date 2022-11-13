@@ -37,7 +37,7 @@ I made a website about creative studio, but basically what I did was to take a d
 
 ## Portfolio Link
 
-`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Creative%20studio%20page`
+`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Creative%20Studio%20Page`
 
 ## Video
 
