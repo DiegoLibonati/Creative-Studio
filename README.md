@@ -23,21 +23,9 @@ I made a website about creative studio, but basically what I did was to take a d
 2. Javascript
 3. HTML5
 
-## Galery
-
-![creative-studio](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/Css/Imagenes/creativestoriescss-0.jpg)
-
-![creative-studio](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/Css/Imagenes/creativestoriescss-1.jpg)
-
-![creative-studio](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/Css/Imagenes/creativestoriescss-2.jpg)
-
-![creative-studio](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/Css/Imagenes/creativestoriescss-3.jpg)
-
-![creative-studio](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/Css/Imagenes/creativestoriescss-4.jpg)
-
 ## Portfolio Link
 
-`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Creative%20Studio%20Page`
+[`https://www.diegolibonati.com.ar/#/project/23`](https://www.diegolibonati.com.ar/#/project/23)
 
 ## Video
 
