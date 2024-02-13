@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-flow: column wrap;
-  background: url("./templates/form.jpg");
+  background: url("../assets/form.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

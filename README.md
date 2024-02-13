@@ -13,6 +13,13 @@
 2. Join to the correct path of the clone
 3. Open index.html in your favorite navigator
 
+---
+
+1. Clone the repository
+2. Join to the correct path of the clone
+3. Execute: `yarn install`
+4. Execute: `yarn dev`
+
 ## Description
 
 I made a website about creative studio, but basically what I did was to take a design from the internet and implement it on my own without seeing the original code. All this was because I wanted to keep practicing CSS.
@@ -20,7 +27,7 @@ I made a website about creative studio, but basically what I did was to take a d
 ## Technologies used
 
 1. CSS3
-2. Javascript
+2. Typescript
 3. HTML5
 
 ## Portfolio Link
@@ -33,12 +40,10 @@ https://user-images.githubusercontent.com/99032604/199624347-9adebe1c-aab6-4a77-
 
 ## Documentation
 
-### ./navbar.js
-
-In this `navbar.js` file we will find all the navbar functionalities. Like for example `openNav()` with this function we are going to handle when the navbar is closed and opened in its mobile version:
+In this `script.ts` file we will find all the navbar functionalities. Like for example `openNav()` with this function we are going to handle when the navbar is closed and opened in its mobile version:
 
 ```
-const openNav = () => {
+const openNav = (): void => {
   navbar.classList.toggle("open-nav");
 
   navbar.classList.contains("open-nav")
@@ -50,75 +55,48 @@ const openNav = () => {
 With the `navbarScroll()` function what it generates is that when passing the 100 height it will style the navbar so that it is visible:
 
 ```
-const navbarScroll = (e) => {
+const navbarScroll = (): void => {
   const y = window.scrollY;
 
   if (y > 100) {
     header.style.backdropFilter = "blur(10px)";
     logoNavbar.style.color = "#000";
-    setStyleToAllElementsWithTheSameClass(
-      navLinks,
-      "#000",
-      "--underline",
-      "#000"
-    );
-    faBars.style.color = "#000";
+    btnOpenNav.style.color = "#000";
+    setMultipleClassName(navLinks, "#000", "--underline", "#000");
   } else {
     header.style.backdropFilter = "blur(0px)";
     logoNavbar.style.color = "#fff";
-    setStyleToAllElementsWithTheSameClass(
-      navLinks,
-      "#fff",
-      "--underline",
-      "#fff"
-    );
-    faBars.style.color = "#fff";
+    btnOpenNav.style.color = "#fff";
+    setMultipleClassName(navLinks, "#fff", "--underline", "#fff");
   }
 };
 ```
 
-`navLinkClicked()` this function will allow us to style the navLink that was pressed and is active:
-
-```
-const navLinkClicked = (e) => {
-  const navLink = e.currentTarget;
-
-  navLinks.forEach(function (navLink) {
-    if (navLink.classList.contains("active")) {
-      navLink.classList.remove("active");
-    }
-  });
-
-  navLink.classList.add("active");
-};
-```
-
-### ./scrollSections.js
-
 Knowing the height of the navbar that we obtain in the variable: `navHeight` we will be able to execute the function `goSection()` which basically serves to go to a specific section when a link in the navbar is touched, that is, a navLink:
 
 ```
-const navHeight = document
-  .querySelector(".header_container")
-  .getBoundingClientRect().height;
-
-const goSection = (e) => {
+const goSection = (e: Event): void => {
   e.preventDefault();
-  const navLink = e.currentTarget.href;
+  const target = e.currentTarget as HTMLAnchorElement;
+  const navLink = target.href;
   const newArray = navLink.split("#");
 
-  const [url, sectionNavLink] = newArray;
+  const [_, sectionNavLink] = newArray;
 
-  sections.forEach(function (section) {
-    if (sectionNavLink === section.id) {
-      const sectionTop = section.offsetTop;
-      const scrollTo = sectionTop - navHeight;
+  const section = document.getElementById(`${sectionNavLink}`) as HTMLElement;
 
-      window.scrollTo({
-        left: 0,
-        top: scrollTo,
-      });
-    }
+  const sectionTop = section.offsetTop;
+  const scrollTo = sectionTop - navHeight;
+
+  window.scrollTo({
+    left: 0,
+    top: scrollTo,
   });
+
+  const activeAnchor = document.querySelector(".active");
+
+  if (activeAnchor) activeAnchor.classList.remove("active");
+
+  target.classList.add("active");
 };
 ```
