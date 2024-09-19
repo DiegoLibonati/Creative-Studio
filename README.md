@@ -1,4 +1,4 @@
-# Creative-Studio-Page
+# Creative Studio
 
 ## Getting Started
 
@@ -32,7 +32,7 @@ I made a website about creative studio, but basically what I did was to take a d
 
 ## Portfolio Link
 
-[`https://www.diegolibonati.com.ar/#/project/23`](https://www.diegolibonati.com.ar/#/project/23)
+[`https://www.diegolibonati.com.ar/#/project/Creative-Studio`](https://www.diegolibonati.com.ar/#/project/Creative-Studio)
 
 ## Video
 
